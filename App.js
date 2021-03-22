@@ -1,21 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { Text, View } from 'react-native';
+import { NativeRouter, Route, Link } from "react-router-native";
+import {Header} from "./src/Header";
+import {Article} from "./src/Article";
+import Search from "./src/Search/Search";
 
 export default function App() {
+  // const [search, setSearch] = useState([])
+  //
+  // const addTodo = title => {
+  //   const newTodo = {
+  //     id: Date.now()
+  //   }
+  // }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeRouter>
+      <View >
+        <Header />
+
+        <Route exact path="/" component={Search} />
+        <Route path="/article" component={Article} />
+      </View>
+    </NativeRouter>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

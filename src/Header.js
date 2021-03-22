@@ -1,12 +1,18 @@
 import React from "react";
-import {View, Text, StyleSheet, Button} from "react-native";
+import {View, Text, StyleSheet} from "react-native";
+import { NativeRouter, Route, Link } from "react-router-native";
+import ColorTheme from "./ColorTheme"
 
-export const Navbar = ({title}) => (
+export const Header = props => (
   <View style={styles.navbar}>
     <View style={styles.container}>
-      <Button style={styles.button} color='#5DB075' title='Назад'/>
-      <Text style={styles.text}>{title}</Text>
-      <Button style={styles.button} color='#5DB075' title='О нас'/>
+      <Link to="/">
+        <Text style={styles.text}>Назад</Text>
+      </Link>
+      <Text style={styles.text}>Help App</Text>
+      <Link to="/" >
+        <Text style={styles.text}>О нас</Text>
+      </Link>
     </View>
   </View>
 )
@@ -16,7 +22,7 @@ const styles = StyleSheet.create({
     height: 78,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    backgroundColor: '#5DB075',
+    backgroundColor: ColorTheme.primary,
     paddingBottom: 2
   },
   container: {
@@ -25,10 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   text: {
-    color: 'white',
+    color: ColorTheme.light,
     fontSize: 20
-  },
-  button: {
-    // textColor: 'white'
   }
 })
