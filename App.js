@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
 import {Header} from "./src/Header";
 import {Article} from "./src/Article";
+import {AboutUs} from "./src/AboutUs";
 import Search from "./src/Search/Search";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
 
         <Route exact path="/" component={Search} />
         <Route path="/article" component={Article} />
+        <Route path="/about" component={AboutUs} />
       </View>
     </NativeRouter>
   );

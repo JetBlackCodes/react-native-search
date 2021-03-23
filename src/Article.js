@@ -1,35 +1,38 @@
 import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet } from "react-native";
 import ColorTheme from "./ColorTheme";
+import {CallButton} from "./Search/CallButton"
 
 export const Article = () => (
-
   <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.text}>{content}</Text>
+    <Text style={styles.title}>{testTitle}</Text>
+    <CallButton />
+    <Text style={styles.text}>{testContent}</Text>
   </View>
 )
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     margin: 16,
     textAlign: 'justify'
 
   },
   title: {
-    color: 'black',
+    color: ColorTheme.dark,
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 16
+    marginBottom: 16,
+    // fontFamily: 'Inter',
   },
   text: {
     color: ColorTheme.text,
-    fontSize: 16
+    fontSize: 16,
+    // fontFamily: 'Inter',
   }
 })
 
-const title = 'Post Title Here...'
-const content = 'Labore sunt veniam amet est. Minim nisi dolor eu ad incididunt cillum elit ex ut. Dolore exercitation nulla tempor consequat aliquip occaecat. Nisi id ipsum irure aute. Deserunt sit aute irure quis nulla eu consequat fugiat Lorem sunt magna et consequat labore. Laboris incididunt id Lorem est duis deserunt nisi dolore eiusmod culpa exercitation consectetur.\n' +
+export const testTitle = 'Post Title Here...'
+export const testContent = 'Labore sunt veniam amet est. Minim nisi dolor eu ad incididunt cillum elit ex ut. Dolore exercitation nulla tempor consequat aliquip occaecat. Nisi id ipsum irure aute. Deserunt sit aute irure quis nulla eu consequat fugiat Lorem sunt magna et consequat labore. Laboris incididunt id Lorem est duis deserunt nisi dolore eiusmod culpa exercitation consectetur.\n' +
   '\n' +
   'Fugiat do aliqua laboris cillum sint dolor officia adipisicing excepteur fugiat officia. Cupidatat ut elit consequat ea laborum occaecat laborum aute consectetur Lorem exercitation. Lorem anim minim officia aliquip commodo deserunt mollit. Duis deserunt quis cillum voluptate duis ipsum quis incididunt elit excepteur excepteur labore duis cillum. Voluptate sint nulla minim eiusmod in nulla. Ea id ad duis esse adipisicing culpa ex esse ea dolore consequat. Reprehenderit eu minim veniam aliquip do ipsum duis do qui adipisicing aliquip ad occaecat.\n' +
   '\n' +

@@ -1,16 +1,16 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
+import { Link } from "react-router-native";
 import ColorTheme from "./ColorTheme"
 
 export const Header = props => (
   <View style={styles.navbar}>
     <View style={styles.container}>
-      <Link to="/">
+      <Link to="/" underlayColor={ColorTheme.primary}>
         <Text style={styles.text}>Назад</Text>
       </Link>
       <Text style={styles.text}>Help App</Text>
-      <Link to="/" >
+      <Link to="/about" underlayColor={ColorTheme.primary}>
         <Text style={styles.text}>О нас</Text>
       </Link>
     </View>
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     backgroundColor: ColorTheme.primary,
-    paddingBottom: 2
+    paddingBottom: 10
   },
   container: {
     width: '100%',
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: ColorTheme.light,
+    backgroundColor: ColorTheme.primary,
     fontSize: 20
   }
 })
