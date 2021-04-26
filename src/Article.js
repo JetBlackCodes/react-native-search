@@ -2,12 +2,13 @@ import React from "react";
 import {View, Text, StyleSheet } from "react-native";
 import ColorTheme from "./ColorTheme";
 import {CallButton} from "./Search/CallButton"
+import {DATA} from "./data"
 
 export const Article = () => (
   <View style={styles.container}>
-    <Text style={styles.title}>{testTitle}</Text>
+    <Text style={styles.title}>{DATA[0].title}</Text>
     <CallButton />
-    <Text style={styles.text}>{testContent}</Text>
+    <Text style={styles.text}>{DATA[0].text}</Text>
   </View>
 )
 
@@ -15,19 +16,17 @@ export const styles = StyleSheet.create({
   container: {
     margin: 16,
     textAlign: 'justify'
-
   },
   title: {
     color: ColorTheme.dark,
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
-    // fontFamily: 'Inter',
   },
   text: {
     color: ColorTheme.text,
     fontSize: 16,
-    // fontFamily: 'Inter',
+    textAlign: 'justify'
   }
 })
 

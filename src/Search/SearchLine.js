@@ -1,10 +1,10 @@
 import React from "react";
 import {View, TextInput, StyleSheet} from "react-native";
 
-export const SearchLine = props => (
+export const SearchLine = ({onChangeSearch}) => (
   <View style={styles.searchContainer}>
     <View style={styles.block}>
-      <TextInput style={styles.input} placeholder="Поиск"/>
+      <TextInput style={styles.input} placeholder="Поиск" onChangeText={onChangeSearch}/>
     </View>
   </View>
 )

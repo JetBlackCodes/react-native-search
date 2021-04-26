@@ -9,7 +9,7 @@ export const Header = props => (
       <Link to="/" underlayColor={ColorTheme.primary}>
         <Text style={styles.text}>Назад</Text>
       </Link>
-      <Text style={styles.text}>Help App</Text>
+      <Text style={styles.text}>Экстренная помощь</Text>
       <Link to="/about" underlayColor={ColorTheme.primary}>
         <Text style={styles.text}>О нас</Text>
       </Link>

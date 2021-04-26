@@ -2,15 +2,14 @@ import React  from "react";
 import { View, VirtualizedList, StyleSheet, Text } from 'react-native';
 import ColorTheme from "../ColorTheme";
 import { Link } from "react-router-native";
-
-const DATA = ["Порезал палец", "Загорелась розетка", "Пожар", "Help"];
+import {DATA} from "../data"
 
 const getItem = (data, index) => ({
   key: Math.random().toString(6).substring(0),
-  title: `Search result ${index+1}`
+  title: data[index].title
 });
 
-const getItemCount = () => 50;
+const getItemCount = (data) => data.length;
 
 const Item = ({ title }) => {
   return (
